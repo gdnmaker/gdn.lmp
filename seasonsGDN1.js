@@ -20,7 +20,7 @@
         z-index: 12;
         width: fit-content;
         max-width: calc(100% - 1em);
-        border-radius: 0.3em;
+        border-radius: 0.3em 0.3em 0.3em 0.3em;
         overflow: hidden;
         opacity: 0;
         transition: opacity 0.22s ease-in-out;
@@ -38,7 +38,7 @@
         z-index: 12;
         width: fit-content;
         max-width: calc(100% - 1em);
-        border-radius: 0.3em;
+        border-radius: 0.3em 0.3em 0.3em 0.3em;
         overflow: hidden;
         opacity: 0;
         transition: opacity 0.22s ease-in-out;
@@ -47,25 +47,25 @@
         backdrop-filter: blur(2px);
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
+    .card--season-complete,
+    .card--season-progress {
+        bottom: 0.50em;
+        margin-left: -0.78em;
+    }
     .card--season-complete div,
     .card--season-progress div {
         text-transform: uppercase;
         font-family: 'Inter', 'Roboto', Arial, sans-serif;
         font-weight: 600;
-		letter-spacing: 0.3px;
+        letter-spacing: 0.3px;
         font-size: 1.05em;
+        color: #1A1A1A !important;
         padding: 0.1em 0.1em 0.08em 0.1em;
         white-space: nowrap;
         display: flex;
         align-items: center;
         line-height: 1.2em;
-		text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.0);
-    }
-    .card--season-complete div {
-        color: #1A1A1A!important;
-    }
-    .card--season-progress div {
-        color: #1A1A1A!important;
+        text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.0);
     }
     .card--season-complete.show,
     .card--season-progress.show {
@@ -75,25 +75,17 @@
         .card--season-complete div,
         .card--season-progress div {
             font-size: 1.0em;
-            0.08em 0.1em 0.06em 0.1em;
+            padding: 0.08em 0.1em 0.06em 0.1em;
         }
     }
     .card--new_seria {
         background: #df1616;
-        color: #1A1A1A!important;
-        padding: 0.3;
-        font-size: 1.2em;
-        border-radius: 0.2em;
+        color: #fff;
+        padding: 0.4em 0.6em;
+        font-size: 0.8em;
+        border-radius: 0.3em;
         text-transform: none;
         font-weight: normal;
-		border: 1px solid #FFFFFF;
-		min-width: 2.8em;
-		text-align: center;
-		height: 1.72em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		box-sizing: border-box;
     }
     .full-start__tag.card--new_seria {
         display: flex;
@@ -103,7 +95,7 @@
     .full-start-new__details .card--new_seria {
         display: inline-block;
     }
-    .content-label { position: absolute!important; top: 1.4em!important; left: -0.8em!important; color: #1A1A1A!important; padding: 0.3em!important; border-radius: 0.2em!important; font-size: 1.2em!important; z-index: 10!important;border: 1px solid #FFFFFF!important; min-width: 2.8em!important;  text-align: center!important;  font-weight: normal!important; font-style: normal!important;   height: 1.72em!important;  display: flex!important;  align-items: center!important;  justify-content: center!important; box-sizing: border-box!important; }
+    .content-label { position: absolute!important; top: 1.4em!important; left: -0.8em!important; color: white!important; padding: 0.4em 0.4em!important; border-radius: 0.3em!important; font-size: 0.8em!important; z-index: 10!important; }
     .serial-label { background-color: #3498db!important; }
     .movie-label  { background-color: #2ecc71!important; }
     body[data-movie-labels="on"] .card--tv .card__type { display: none!important; }
