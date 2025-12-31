@@ -36,13 +36,12 @@ style.textContent = `
     box-sizing: border-box;
 }
 
-/* кольори 1:1 */
 .card--season-complete {
-    background: rgba(45, 136, 255, .85);
+    background: rgba(45,136,255,.85);
 }
 
 .card--season-progress {
-    background: rgba(235, 64, 52, .85);
+    background: rgba(235,64,52,.85);
 }
 
 .card--season-complete div,
@@ -68,7 +67,6 @@ style.textContent = `
     opacity: 1;
 }
 
-/* мобільна версія 1:1 */
 @media (max-width: 768px) {
     .card--season-complete div,
     .card--season-progress div {
@@ -76,40 +74,8 @@ style.textContent = `
         padding: 5px 8px;
     }
 }
-
-/* нова серія — без змін */
-.card--new_seria {
-    background: #df1616;
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 12px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.full-start__tag.card--new_seria {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.full-start-new__details .card--new_seria {
-    display: inline-flex;
-}
-
-/* лейбли типу контенту */
-.content-label {
-    position: absolute !important;
-    top: 1.4em !important;
-    left: -0.8em !important;
-
-    padding: 6px 8px !important;
-    border-radius: 4px !important;
-
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: #fff !impor
-    document.head.appendChild(style);
+`;
+document.head.appendChild(style);
     function getMediaType(cardData) {
         if (!cardData) return 'unknown';
         if (cardData.name || cardData.first_air_date) return 'tv';
