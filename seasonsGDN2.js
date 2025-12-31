@@ -11,46 +11,29 @@
     };
     var style = document.createElement('style');
     style.textContent = `
-    .card--season-complete {
-        position: absolute;
-        top: auto;
-        bottom: auto;
-        left: -0.8em;
-        background-color: rgba(52,152,219,0.8);
-        z-index: 12;
-        width: fit-content;
-        max-width: calc(100% - 1em);
-        border-radius: 0.3em 0.3em 0.3em 0.3em;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity 0.22s ease-in-out;
-        text-align: center;
-        white-space: nowrap;
-        backdrop-filter: blur(2px);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .card--season-progress {
-        position: absolute;
-        top: auto;
-        bottom: auto;
-        left: -0.8em;
-        background-color: rgba(244,67,54,0.8);
-        z-index: 12;
-        width: fit-content;
-        max-width: calc(100% - 1em);
-        border-radius: 0.3em 0.3em 0.3em 0.3em;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity 0.22s ease-in-out;
-        text-align: center;
-        white-space: nowrap;
-        backdrop-filter: blur(2px);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
     .card--season-complete,
     .card--season-progress {
+        position: absolute;
         bottom: 0.50em;
+        left: 0;
+        background-color: rgba(253, 217, 38, 0.8);
+        z-index: 10;
+        width: fit-content;
+        max-width: calc(100% - 1em);
+        border-radius: 0.3em;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.22s ease-in-out;
+        text-align: center;
+        white-space: nowrap;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         margin-left: -0.78em;
+    }
+    .card--season-complete {
+        background-color: rgba(52,152,219,0.8);
+    }
+    .card--season-progress {
+        background-color: rgba(244,67,54,0.8);
     }
     .card--season-complete div,
     .card--season-progress div {
@@ -62,9 +45,6 @@
         color: #1A1A1A !important;
         padding: 0.1em 0.1em 0.08em 0.1em;
         white-space: nowrap;
-        display: flex;
-        align-items: center;
-        line-height: 1.2em;
         text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.0);
     }
     .card--season-complete.show,
