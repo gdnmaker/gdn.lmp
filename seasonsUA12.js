@@ -13,9 +13,9 @@
     style.textContent = `
     .card--season-complete {
         position: absolute;
-        top: auto;
+        top: 3.0em;
         bottom: auto;
-        left: -0.8em;
+        left: -0.6em;
         background-color: rgba(52,152,219,0.8);
         z-index: 12;
         width: fit-content;
