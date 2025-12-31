@@ -10,76 +10,105 @@
         language: 'uk'
     };
     var style = document.createElement('style');
-    style.textContent = `
-    .card--season-complete,
-    .card--season-progress {
-        position: absolute;
-        bottom: 0.50em;
-        left: 0;
-        background-color: rgba(253, 217, 38, 0.8);
-        z-index: 10;
-        width: fit-content;
-        max-width: calc(100% - 1em);
-        border-radius: 0.3em;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity 0.22s ease-in-out;
-        text-align: center;
-        white-space: nowrap;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        margin-left: -0.78em;
-    }
-    .card--season-complete {
-        background-color: rgba(52,152,219,0.8);
-    }
-    .card--season-progress {
-        background-color: rgba(244,67,54,0.8);
-    }
+style.textContent = `
+.card--season-complete,
+.card--season-progress {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: -0.8em;
+
+    display: inline-flex;
+    align-items: center;
+
+    z-index: 12;
+    max-width: calc(100% - 1em);
+
+    border-radius: 4px;
+    overflow: hidden;
+
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+
+    box-sizing: border-box;
+}
+
+/* кольори 1:1 */
+.card--season-complete {
+    background: rgba(45, 136, 255, .85);
+}
+
+.card--season-progress {
+    background: rgba(235, 64, 52, .85);
+}
+
+.card--season-complete div,
+.card--season-progress div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 10px;
+
+    font-family: Inter, Roboto, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    line-height: 1;
+
+    color: #fff;
+    white-space: nowrap;
+}
+
+.card--season-complete.show,
+.card--season-progress.show {
+    opacity: 1;
+}
+
+/* мобільна версія 1:1 */
+@media (max-width: 768px) {
     .card--season-complete div,
     .card--season-progress div {
-        text-transform: uppercase;
-        font-family: 'Inter', 'Roboto', Arial, sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        font-size: 1.05em;
-        color: #1A1A1A !important;
-        padding: 0.1em 0.1em 0.08em 0.1em;
-        white-space: nowrap;
-        text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.0);
+        font-size: 11px;
+        padding: 5px 8px;
     }
-    .card--season-complete.show,
-    .card--season-progress.show {
-        opacity: 1;
-    }
-    @media (max-width: 768px) {
-        .card--season-complete div,
-        .card--season-progress div {
-            font-size: 1.0em;
-            padding: 0.08em 0.1em 0.06em 0.1em;
-        }
-    }
-    .card--new_seria {
-        background: #df1616;
-        color: #fff;
-        padding: 0.4em 0.6em;
-        font-size: 0.8em;
-        border-radius: 0.3em;
-        text-transform: none;
-        font-weight: normal;
-    }
-    .full-start__tag.card--new_seria {
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-    }
-    .full-start-new__details .card--new_seria {
-        display: inline-block;
-    }
-    .content-label { position: absolute!important; top: 1.4em!important; left: -0.8em!important; color: white!important; padding: 0.4em 0.4em!important; border-radius: 0.3em!important; font-size: 0.8em!important; z-index: 10!important; }
-    .serial-label { background-color: #3498db!important; }
-    .movie-label  { background-color: #2ecc71!important; }
-    body[data-movie-labels="on"] .card--tv .card__type { display: none!important; }
-    `;
+}
+
+/* нова серія — без змін */
+.card--new_seria {
+    background: #df1616;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.full-start__tag.card--new_seria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.full-start-new__details .card--new_seria {
+    display: inline-flex;
+}
+
+/* лейбли типу контенту */
+.content-label {
+    position: absolute !important;
+    top: 1.4em !important;
+    left: -0.8em !important;
+
+    padding: 6px 8px !important;
+    border-radius: 4px !important;
+
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #fff !impor
     document.head.appendChild(style);
     function getMediaType(cardData) {
         if (!cardData) return 'unknown';
