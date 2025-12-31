@@ -13,16 +13,15 @@
 style.textContent = `
 .card--season-complete,
 .card--season-progress {
-    position: relative;
-    top: 2.5em;
-    bottom: auto;
-    left: -0.8em;
+    position: absolute;
+    top: 2.9em;
+    left: 0.6em;
 
     display: inline-flex;
     align-items: center;
 
     z-index: 12;
-    max-width: calc(100% - 1em);
+    max-width: calc(100% - 1.2em);
 
     border-radius: 4px;
     overflow: hidden;
@@ -30,18 +29,18 @@ style.textContent = `
     opacity: 0;
     transition: opacity .2s ease;
 
-    backdrop-filter: blur(4px);
     box-shadow: 0 4px 12px rgba(0,0,0,.25);
-
     box-sizing: border-box;
 }
 
-.card--season-complete {
-    background: rgba(45,136,255,.85);
+/* 🔴 як TV */
+.card--season-progress {
+    background: #EB4034; /* суцільний червоний */
 }
 
-.card--season-progress {
-    background: rgba(235,64,52,.85);
+/* якщо потрібно для повного сезону */
+.card--season-complete {
+    background: #2D88FF;
 }
 
 .card--season-complete div,
@@ -58,7 +57,7 @@ style.textContent = `
     letter-spacing: .2px;
     line-height: 1;
 
-    color: #fff;
+    color: #000; /* ⚫ чорний текст */
     white-space: nowrap;
 }
 
