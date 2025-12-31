@@ -360,6 +360,7 @@
                 document.querySelectorAll('.card:not([data-season-processed])').forEach(addSeasonBadgeToCard);
             }, 1000);
         }
+    }
     if (window.appready) {
         initPlugin();
     }
