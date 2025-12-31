@@ -14,7 +14,7 @@ style.textContent = `
 .card--season-complete,
 .card--season-progress {
     position: relative;
-    top: 0.8em;
+    top: 1.5em;
     bottom: auto;
     left: -0.8em;
 
