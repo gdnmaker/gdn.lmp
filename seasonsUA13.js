@@ -26,7 +26,6 @@
         transition: opacity 0.22s ease-in-out;
         text-align: center;
         white-space: nowrap;
-        backdrop-filter: blur(2px);
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     .card--season-progress {
@@ -44,7 +43,6 @@
         transition: opacity 0.22s ease-in-out;
         text-align: center;
         white-space: nowrap;
-        backdrop-filter: blur(2px);
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     .card--season-complete div,
